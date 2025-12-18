@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Terminator: Armored Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="startScreen">
+        <h1>TERMINATOR: BREAKOUT</h1>
+        <p style="color: #00ffff; font-size: 0.8rem; margin-bottom: 20px;">Серые кирпичи — бронированные!</p>
+        <button id="startButton">START MISSION</button>
+    </div>
 
+    <audio id="terminatorMusic" loop><source src="terminator_8bit.mp3" type="audio/mp3"></audio>
+    <audio id="gameOverAudio"><source src="gameover_sound.mp3" type="audio/mp3"></audio>
+
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    <div id="gameOverScreen" class="hidden">
+        <div class="splatter"></div>
+        <div class="game-over-text">GAME OVER</div>
+        <button onclick="document.location.reload()">RETRY MISSION</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
